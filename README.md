@@ -17,3 +17,10 @@ This was designed in Onshape and KiCad.
 ## Other details:
 This uses 1 ESP32 DevKit v1, 2 Arduino Unos, and 1 Arduino Mega. This is not the best way to do it, I only did this because I'm dead broke and that's what i had.
 This project uses the MIT License.
+
+## Images
+<img src="imgs/mainpcb.png">
+<img src="imgs/modpcb.png">
+<img src="imgs/middle.png">
+<img src="imgs/mounts.png">
+<img src="imgs/wheels.png">
