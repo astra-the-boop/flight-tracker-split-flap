@@ -1,0 +1,22 @@
+Part,Qty,Price per pc VND,Price per pc USD,Total price USD,Link,Notes,SECTION
+5V 28BYJ-48 Stepper motor + ULN2003 Module,18,"50,000 ₫",$1.90,$34.23,https://vn.shp.ee/5EBNqvki,,Modules
+A3144 V1 Hall effect sensor MODULE,18,"25,000 ₫",$0.95,$17.12,https://vn.shp.ee/HDDp57As,,
+PCB,1,"300,000 ₫",$11.41,$11.41,,"for all 18 modules (actually 25, they manufacturer gave me extra for some reason)",
+3D printing motor mount,767.52,500 ₫,$0.02,$14.60,,per gram,
+3D printing wheel motor side,252,500 ₫,$0.02,$4.79,,per gram,
+3D printing wheel right side,261,500 ₫,$0.02,$4.96,,per gram,
+3D printing wheel connector 1+4,212.4,500 ₫,$0.02,$4.04,,per gram,
+3D printing wheel connector 2+3,293.76,500 ₫,$0.02,$5.59,,per gram,
+3D printing right side mount,840.96,500 ₫,$0.02,$15.99,,per gram,
+3D printing centerpiece,918,500 ₫,$0.02,$17.46,,per gram,
+2mm x Ø5mm Nd magnet (10pc),2,"50,000 ₫",$1.90,$3.80,https://vn.shp.ee/khDsGHYL,,
+LEDs,18,"1,000 ₫",$0.04,$0.68,,,
+Resistor,1,"36,000 ₫",$1.37,$1.37,https://vn.shp.ee/Kp1muEma,,
+PCB,1,"440,000 ₫",$16.74,$16.74,,,Main
+5V/10A Power supply,1,"122,000 ₫",$4.64,$4.64,,,
+ESP32,1,"136,000 ₫",$5.17,$5.17,,,
+Arduino Uno,2,"201,000 ₫",$7.64,$15.29,https://vn.shp.ee/dqiFtsHQ,,
+Arduino Mega,1,"280,000 ₫",$10.65,$10.65,https://lkcg.vn/arduino-mega2560-ch340g-tang-kem-cap,,
+EC11 Rotary Encoder Switch,1,"14,000 ₫",$0.53,$0.53,https://banlinhkien.com/cong-tac-vo-cap-ec11-p6648261.html,,
+BSS138 voltage thingy,1,"40,000 ₫",$1.52,$1.52,https://hshop.vn/mach-chuyen-muc-ton-hieu-2-chieu-8-kenh,Including shipping,
+,,,$0.00,$0.00,,,
