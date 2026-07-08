@@ -41,4 +41,16 @@ The motor shall rotate until the hall effect sensor sends a signal (using INPUT_
 For modules that aren't connected directly to the ESP32, the ESP32 shall send the desired character to be displayed to the Arduino Unos or Mega via I²C, and then it does the above.
 
 ## Input
-There's a 
+There's a rotary encoder switch on the Arduino Mega, so the Mega shall receive input from the rotary encoder switch via INPUT_PULLUP, and relay it back to the ESP32 via I²C.
+On the ESP32's memory, there shall be a string variable which represents the flight code.
+By default, the displays show nothing, and the current mode is set to read only.
+When a signal is received from the rotary encoder's CLK pin, Arduino mega starts a timer until it's released, if it's longer than 1500ms, then it relays a signal to the ESP32 to change to edit mode.
+In edit mode, there is an index (pointer) variable set at 0 (representing flightCode[0] (the string we set earlier)). Rotating the encoder clockwise moves the value of the chracter of which the pointer is pointing to is set to the next item (or loops over to [0] if it's [-1]) of the array of characters we set earlier (blank, A-Z, 1-9, 0, special characters). Vice versa for counterclockwise. The motor moves 8º (or -8º for ccw) without checking for hall effect sensor homing.
+Receiving a single click would move it to the next pointer position (or in case of [4], moves to [0]), a single click is a click where the timer ends <1500ms.
+Once in edit mode and a long click (≥1500m) happens, all characters in flightCode.substr(2, 4) that is not either blank or an integer is replaced with '0' and if it's blank, it's replaced with '', and reformatted after such that it's a 4 digit number (e.g. 12 -> 0012). After which, a regular display reload would occur as described previously (i.e. does a rotation until sensor detects magnet, then rotate 8º until reaches the desired character). An API request to AviationStack would then be made and data is saved to request variable. After which it goes through the process of refreshing, requesting, parsing, and displaying as previously displayed.
+
+## Refreshing
+3 variables are set for the data refresh rates, one for 90 minutes until scheduled flight, one for 9 hours until scheduled flights, and one for all before that. (Would've just had everything at a really short refresh time if not for the fact that you only get like 100 FUCKING REQUESTS A MONTH FOR SOME REASON. IT'S THE BEST FUCKING OPTION TOO EVERYTHING ELSE IS PAID)
+Just does a loop with the set time where each loop goes through the fetch-~~decode-execute~~parse-display cycle.
+
+
