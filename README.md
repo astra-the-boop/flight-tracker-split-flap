@@ -1,5 +1,12 @@
 # Split flap flight-tracker display
 ---
+## Images
+<img src="imgs/mainpcb.png">
+<img src="imgs/modpcb.png">
+<img src="imgs/middle.png">
+<img src="imgs/mounts.png">
+<img src="imgs/wheels.png">
+
 ## Whots this UwU?
 It's a split flap display with 18 characters designed to show just enough info to track flights. It uses an ESP32 to send API requests to [AviationStack](https://docs.apilayer.com/aviationstack/docs/api-documentation) (oof, only 100 req/mo), and displays the info accordingly.
 
@@ -17,10 +24,3 @@ This was designed in Onshape and KiCad.
 ## Other details:
 This uses 1 ESP32 DevKit v1, 2 Arduino Unos, and 1 Arduino Mega. This is not the best way to do it, I only did this because I'm dead broke and that's what i had.
 This project uses the MIT License.
-
-## Images
-<img src="imgs/mainpcb.png">
-<img src="imgs/modpcb.png">
-<img src="imgs/middle.png">
-<img src="imgs/mounts.png">
-<img src="imgs/wheels.png">
